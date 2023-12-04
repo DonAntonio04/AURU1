@@ -1,0 +1,14 @@
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\bin\Debug\net6.0\ArreglosU1_Repaso.exe
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\bin\Debug\net6.0\ArreglosU1_Repaso.deps.json
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\bin\Debug\net6.0\ArreglosU1_Repaso.runtimeconfig.json
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\bin\Debug\net6.0\ArreglosU1_Repaso.dll
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\bin\Debug\net6.0\ArreglosU1_Repaso.pdb
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.AssemblyInfo.cs
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.dll
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\refint\ArreglosU1_Repaso.dll
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.pdb
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ArreglosU1_Repaso.genruntimeconfig.cache
+C:\Users\hp\source\repos\ArreglosU1_Repaso\ArreglosU1_Repaso\obj\Debug\net6.0\ref\ArreglosU1_Repaso.dll
