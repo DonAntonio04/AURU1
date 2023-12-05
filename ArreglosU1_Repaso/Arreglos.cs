@@ -23,7 +23,28 @@ namespace ArreglosU1_Repaso
 
             Console.WriteLine($"El valor '{valor}' se ha insertado correctamente en la posición {posicion}.");
         }
+        public void EliminarEnPosicion(int posicion)
+        {
+            if (posicion < 0 || posicion >= persona.Length)
+            {
+                Console.WriteLine("Posición inválida. Debe estar entre 0 y 9.");
+                return;
+            }
 
+            Console.WriteLine($"Se ha eliminado el valor '{persona[posicion]}' en la posición {posicion}.");
+            persona[posicion] = null; // Puedes asignar null u otro valor predeterminado según tus necesidades.
+        }
+        public void ModificarEnPosicion(int posicion, string nuevoValor)
+        {
+            if (posicion < 0 || posicion >= persona.Length)
+            {
+                Console.WriteLine("Posición inválida. Debe estar entre 0 y 9.");
+                return;
+            }
+
+            Console.WriteLine($"Se ha modificado el valor en la posición {posicion}. Antiguo valor: {persona[posicion]}, Nuevo valor: {nuevoValor}.");
+            persona[posicion] = nuevoValor;
+        }
         public void MostrarDatosIngresados()
         {
             Console.WriteLine("\nDatos ingresados:");
