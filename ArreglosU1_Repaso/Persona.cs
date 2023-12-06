@@ -16,5 +16,9 @@ namespace ArreglosU1_Repaso
             Nombre = nombre;
             Edad = edad;
         }
+        public override string ToString()
+        {
+            return $"{Nombre} y {Edad}";
+        }
     }
 }

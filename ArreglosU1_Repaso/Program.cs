@@ -7,44 +7,50 @@ namespace ArreglosU1_Repaso
         {
             Arreglos arreglo = new Arreglos();
 
-            arreglo.InsertarEnPosicion(0, "Persona1");
-            arreglo.InsertarEnPosicion(1, "Persona2");
-            arreglo.InsertarEnPosicion(2, "Persona3");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Ingrese el nombre de la persona:");
+                string nombre = Console.ReadLine();
+                Console.WriteLine("Ingrese la edad de la persona");
+                int edad = Convert.ToInt32(Console.ReadLine());
 
-            // Mostrar datos ingresados
-            arreglo.MostrarDatosIngresados();
+               Persona insertarPersona = new Persona(nombre, edad);
 
-            // Modificar elemento en la posición 1
-            arreglo.ModificarEnPosicion(1, "NuevaPersona2");
+                Console.WriteLine("Ingrese la posición en la que desea insertar los datos:");
+                int posicionInsercion = Convert.ToInt32(Console.ReadLine());
 
-            // Eliminar elemento en la posición 0
-            arreglo.EliminarEnPosicion(0);
+                arreglo.InsertarEnPosicion(posicionInsercion, insertarPersona);
+                arreglo.MostrarDatos();
 
-            // Mostrar datos después de las operaciones
-            arreglo.MostrarDatosIngresados();
+                Console.WriteLine("Ingrese un nombre a buscar");
+                string nombre2 = Console.ReadLine();
 
-            Console.ReadLine(); // Para 
+                arreglo.BuscarPorNombre(nombre2);
+           
 
+                Console.WriteLine("Ingresa una posicion que deseas modificar");
+                int modificar = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Ingresa el nombre");
+                string nuevo = Console.ReadLine();
+                Console.WriteLine("Ingresa la edad");
+                int edad2 = Convert.ToInt32(Console.ReadLine());    
 
+                Persona insertarpersona = new Persona(nuevo , edad2);
 
+                arreglo.ModificarPosicion(modificar,insertarpersona);
 
+                arreglo.MostrarDatos();
+                arreglo.OrdenarEdadesDescendente();
+                Console.WriteLine("Ingresa una posición ha eliminar");
+                int eliminar = Convert.ToInt32(Console.ReadLine());
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    Console.WriteLine("Ingrese un valor:");
-            //    string valor = Console.ReadLine();
+                arreglo.EliminarPosicion(eliminar);
 
-            //    Console.WriteLine("Ingrese la posición del 0 al 9:");
-            //    int posicion = Convert.ToInt32(Console.ReadLine());
+                arreglo.MostrarDatos();
+ 
 
-            //    persona.InsertarEnPosicion(posicion, valor);
-            //}
-
-            // Mostrar los datos ingresados en la matriz
-            //persona.MostrarDatosIngresados();
-
-            Console.ReadKey();
+            }
         }
     }
 }
