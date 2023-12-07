@@ -9,16 +9,16 @@ namespace ArreglosU1_Repaso
     public class Arreglos
     {
         //como crear una matriz
-        Persona[] persona = new Persona[3];
+        Persona[] persona = new Persona[5];
         public void InsertarEnPosicion(int posicion, Persona valor)
         {
-            if (posicion < - 1 || posicion >= persona.Length)
+            if (posicion < -1 || posicion >= persona.Length)
             {
-                Console.WriteLine("Posición inválida. Debe estar entre 0 y 9.");
+                Console.WriteLine("Posición inválida. Debe estar entre 0 y 4.");
                 return;
             }
 
-            persona[posicion - 1] = valor;
+            persona[posicion] = valor;
 
             Console.WriteLine($"El nombre {valor.Nombre} y edad {valor.Edad}  se ha insertado correctamente en la posición {posicion}.");
         }
@@ -38,14 +38,14 @@ namespace ArreglosU1_Repaso
         }
         public void EliminarPosicion(int posicion)
         {
-            if (posicion < 0 || posicion >= persona.Length) 
+            if (posicion < -1 || posicion >= persona.Length) 
             {
                 Console.WriteLine("Posición invalida");
                 return ;
             }
             
             Console.WriteLine($"El valor {persona[posicion]} se ha eliminado en la posición {posicion}");
-            persona[posicion - 1] = null;
+            persona[posicion] = null;
         }
         public void ModificarPosicion(int posicion, Persona nuevoDato)
         {
@@ -53,7 +53,7 @@ namespace ArreglosU1_Repaso
             {
                 Console.WriteLine("Posición invalida");
             }
-            persona[posicion - 1] = nuevoDato;
+            persona[posicion] = nuevoDato;
             Console.WriteLine($"El nuevo valor {nuevoDato.Nombre}, Edad: {nuevoDato.Edad} se ha modificado en la posición {posicion}");
         }
         public void MostrarDatos()
@@ -61,23 +61,27 @@ namespace ArreglosU1_Repaso
             Console.WriteLine("Los datos ingresados son");
             for(int i = 0; i < persona.Length; i++)
             {
-                Console.WriteLine($"Posición: {persona [i] }");
+                Console.WriteLine($"Posición {i}: {persona [i] }");
             }
         }
-        public void OrdenarEdadesDescendente()
+
+        public void OrdenarEdadDescendente()
         {
-            // Filtrar elementos no nulos y ordenar por edad de manera descendente
-            var edadesOrdenadas = persona
-                .Where(p => p != null)
-                .OrderByDescending(p => p.Edad)
-                .ToArray();
-
-            // Reemplazar el arreglo original con el arreglo ordenado
-            Array.Copy(edadesOrdenadas, persona, edadesOrdenadas.Length);
-
-            Console.WriteLine("Edades ordenadas de manera descendente:");
-            MostrarDatos(); // Puedes ajustar este método según tus necesidades
+            for (int i = 0; i < persona.Length - 1; i++)
+            {
+                for (int j = 0; j < persona.Length - i - 1; j++)
+                {
+                    if (persona[j]?.Edad < persona[j + 1]?.Edad)
+                    {
+                        // Intercambiar las posiciones si la edad es mayor
+                        Persona temp = persona[j];
+                        persona[j] = persona[j + 1];
+                        persona[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Las edades se han ordenado de forma descendente");
+            MostrarDatos(); // Muestra los datos ordenados
         }
-
     }
 }
