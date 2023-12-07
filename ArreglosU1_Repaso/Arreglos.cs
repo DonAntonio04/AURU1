@@ -28,7 +28,7 @@ namespace ArreglosU1_Repaso
             {
                 if (persona[i] != null && persona[i].Nombre.Equals(nombreBuscado))
                 {
-                    Console.WriteLine($"La persona con el nombre '{nombreBuscado}' se encuentra en la posición {i}.");
+                    Console.WriteLine($"La persona con el nombre '{nombreBuscado}' se encuentra en la posición {i + 1}.");
                     return persona[i];
                 }
             }
@@ -61,6 +61,7 @@ namespace ArreglosU1_Repaso
             Console.WriteLine("Los datos ingresados son");
             for(int i = 0; i < persona.Length; i++)
             {
+<<<<<<< HEAD
                 Console.WriteLine($"Posición {i}: {persona [i] }");
             }
         }
@@ -83,5 +84,12 @@ namespace ArreglosU1_Repaso
             Console.WriteLine("Las edades se han ordenado de forma descendente");
             MostrarDatos(); // Muestra los datos ordenados
         }
+=======
+                Console.WriteLine($"Posición {i + 1 }: {persona [i] }");
+            }
+        }
+  
+
+>>>>>>> refs/remotes/origin/mySuperBranch
     }
 }

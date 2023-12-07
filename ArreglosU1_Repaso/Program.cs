@@ -7,6 +7,7 @@ namespace ArreglosU1_Repaso
         {
             Arreglos arreglo = new Arreglos();
 
+<<<<<<< HEAD
             //Insertar en la posición deseada
             for (int i = 0; i < 2; i++)
             {
@@ -64,6 +65,38 @@ namespace ArreglosU1_Repaso
                     }
                 }while(!esnumero2);
 
+=======
+            for (int i = 0; i < 1; i++)
+            {
+                Console.WriteLine("Ingrese el nombre de la persona:");
+                string nombre = Console.ReadLine();
+
+                for (int z = 0; z < nombre.Length; i++)
+                {
+                    if (!Char.IsLetter(nombre[i]))
+                    {
+                        Console.WriteLine("El nombre solo puede contener letras.");
+                        return;
+                    }
+                }
+
+
+
+                Console.WriteLine("Ingrese la edad de la persona");
+                    int edad = Convert.ToInt32(Console.ReadLine());
+
+                    Persona insertarPersona = new Persona(nombre, edad);
+
+                    Console.WriteLine("Ingrese la posición en la que desea insertar los datos entre 0 y 4:");
+                    int posicionInsercion = Convert.ToInt32(Console.ReadLine());
+
+                    arreglo.InsertarEnPosicion(posicionInsercion, insertarPersona);
+                
+               
+
+             
+                arreglo.MostrarDatos();
+>>>>>>> refs/remotes/origin/mySuperBranch
 
                 string nuevo;
                 bool esvalido;
@@ -112,6 +145,11 @@ namespace ArreglosU1_Repaso
                 }while(!esNombre);
                 arreglo.BuscarPorNombre(nombre2);
 
+<<<<<<< HEAD
+=======
+                Console.WriteLine("Ingresa una posicion que deseas modificar entre el 0 y 4");
+                int modificar = Convert.ToInt32(Console.ReadLine());
+>>>>>>> refs/remotes/origin/mySuperBranch
 
                 //Eliminar una posicion;
                 int eliminar2;
@@ -126,7 +164,22 @@ namespace ArreglosU1_Repaso
                         Console.WriteLine("Ingrese el formato correcto");
                     }
 
+<<<<<<< HEAD
                 } while (!esEliminar);
+=======
+                Persona insertarpersona = new Persona(nuevo , edad2);
+
+                arreglo.ModificarPosicion(modificar,insertarpersona);
+
+                arreglo.MostrarDatos();
+                //arreglo.OrdenarEdadesDescendente();
+                Console.WriteLine("Ingresa una posición ha eliminar");
+                int eliminar = Convert.ToInt32(Console.ReadLine());
+
+                arreglo.EliminarPosicion(eliminar);
+
+                arreglo.MostrarDatos();
+>>>>>>> refs/remotes/origin/mySuperBranch
  
                 arreglo.EliminarPosicion(eliminar2);
                 arreglo.MostrarDatos();
